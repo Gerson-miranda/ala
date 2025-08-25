@@ -4,11 +4,11 @@ public class Funcionario {
     private String id;
     private String nome;
     private String salario;
-    private String setor;
-    private String sexo;
+    private Setor setor;
+    private Sexo sexo;
     private String idade;
 
-    public Funcionario(String id, String nome, String salario, String setor, String sexo, String idade) {
+    public Funcionario(String id, String nome, String salario, Setor setor, Sexo sexo, String idade) {
         this.id = id;
         this.nome = nome;
         this.salario = salario;
@@ -41,19 +41,19 @@ public class Funcionario {
         this.salario = salario;
     }
 
-    public String getSetor() {
+    public Setor getSetor() {
         return setor;
     }
 
-    public void setSetor(String setor) {
+    public void setSetor(Setor setor) {
         this.setor = setor;
     }
 
-    public String getSexo() {
+    public Sexo getSexo() {
         return sexo;
     }
 
-    public void setSexo(String sexo) {
+    public void setSexo(Sexo sexo) {
         this.sexo = sexo;
     }
 
@@ -71,8 +71,8 @@ public class Funcionario {
                 "id='" + id + '\'' +
                 ", nome='" + nome + '\'' +
                 ", salario='" + salario + '\'' +
-                ", setor='" + setor + '\'' +
-                ", sexo='" + sexo + '\'' +
+                ", setor=" + setor +
+                ", sexo=" + sexo +
                 ", idade='" + idade + '\'' +
                 '}';
     }

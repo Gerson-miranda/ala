@@ -2,9 +2,9 @@ package org.example.ex3;
 
 public class cliente {
     private String nome;
-    private String pedido;
+    private pedido pedido;
 
-    public cliente(String nome, String pedido) {
+    public cliente(String nome, org.example.ex3.pedido pedido) {
         this.nome = nome;
         this.pedido = pedido;
     }
@@ -17,11 +17,11 @@ public class cliente {
         this.nome = nome;
     }
 
-    public String getPedido() {
+    public org.example.ex3.pedido getPedido() {
         return pedido;
     }
 
-    public void setPedido(String pedido) {
+    public void setPedido(org.example.ex3.pedido pedido) {
         this.pedido = pedido;
     }
 
@@ -29,7 +29,7 @@ public class cliente {
     public String toString() {
         return "cliente{" +
                 "nome='" + nome + '\'' +
-                ", pedido='" + pedido + '\'' +
+                ", pedido=" + pedido +
                 '}';
     }
 }

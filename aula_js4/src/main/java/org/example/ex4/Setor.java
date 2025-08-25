@@ -2,5 +2,5 @@ package org.example.ex4;
 
 public enum Setor {
 
-    FINANCEIRO,MARKETING,ReCURSOS_HUMANOS,Vendas
+    FINANCEIRO,MARKETING,RECURSOS_HUMANOS,Vendas;
 }
