@@ -73,7 +73,8 @@ public class Endereco {
                 ", numero='" + numero + '\'' +
                 ", complemento='" + complemento + '\'' +
                 ", cidade='" + cidade + '\'' +
-                ", uf=" + uf +
+                ", uf=" + uf.getNome() +
+                ", uf=" + uf.getSigla() +
                 ", cep='" + cep + '\'' +
                 '}';
     }
