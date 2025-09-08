@@ -2,41 +2,42 @@ package org.example.att2;
 
 public class Diretor extends Funcionario implements Contratacao{
 
-    @Override
-    public void admitir(Funcionario funcionario) {
+    private final double premio = 0.2;
 
-    }
-
-    @Override
-    public void demitir(Funcionario funcionario) {
-
-    }
-
-    private double premio;
-
-
-    public Diretor(String nome, String datanascimento, Sexo sexo, Setor setor, double salario, double premio) {
+    public Diretor(String nome, String datanascimento, Sexo sexo, Setor setor, double salario) {
         super(nome, datanascimento, sexo, setor, salario);
-        this.premio = premio;
     }
 
     public double getPremio() {
         return premio;
     }
 
-    public void setPremio(double premio) {
-        this.premio = premio;
+    // Implementa os metodos da interface Contratacao
+    @Override
+    public void admitir(Funcionario funcionario) {
+        System.out.println("Admitido: \n " + funcionario.toString());
+    }
+
+    @Override
+    public void demitir(Funcionario funcionario) {
+        System.out.println("Demitido: \n " + funcionario.toString());
+    }
+// Retorna o salario mais o premio
+    @Override
+    public double getsalarioFinal() {
+        return super.salario + (super.salario * this.premio);
     }
 
     @Override
     public String toString() {
         return "Diretor{" +
-                "premio=" + premio +
+                "setor=" + setor +
+                ", premio=" + premio +
                 ", nome='" + nome + '\'' +
                 ", datanascimento='" + datanascimento + '\'' +
                 ", sexo=" + sexo +
-                ", setor=" + setor +
                 ", salario=" + salario +
+                ", salariofinal=" + this.getsalarioFinal()  +
                 '}';
     }
 }

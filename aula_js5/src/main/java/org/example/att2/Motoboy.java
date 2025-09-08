@@ -2,7 +2,7 @@ package org.example.att2;
 
 public class Motoboy extends Funcionario{
 
-    private String carteiraDeHabilitacao;
+private String carteiraDeHabilitacao;
 
     public Motoboy(String nome, String datanascimento, Sexo sexo, Setor setor, double salario, String carteiraDeHabilitacao) {
         super(nome, datanascimento, sexo, setor, salario);
@@ -17,6 +17,10 @@ public class Motoboy extends Funcionario{
         this.carteiraDeHabilitacao = carteiraDeHabilitacao;
     }
 
+    @Override
+    public double getsalarioFinal() {
+        return super.salario;
+    }
 
     @Override
     public String toString() {
@@ -27,6 +31,7 @@ public class Motoboy extends Funcionario{
                 ", sexo=" + sexo +
                 ", setor=" + setor +
                 ", salario=" + salario +
+                ", salariofinal=" + this.getsalarioFinal() +
                 '}';
     }
 }

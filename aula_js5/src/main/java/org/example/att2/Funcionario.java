@@ -56,6 +56,10 @@ public abstract class Funcionario {
         this.salario = salario;
     }
 
+    //Metodo abstrato para calcular o salario
+    public abstract double getsalarioFinal();
+
+
     @Override
     public String toString() {
         return "Funcionario{" +
